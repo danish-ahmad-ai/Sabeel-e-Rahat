@@ -9,4 +9,4 @@ COPY backend/ .
 
 ENV PORT=8000
 
-CMD uvicorn main:app --host 0.0.0.0 --port ${PORT} 
+CMD ["/bin/bash", "-c", "uvicorn main:app --host 0.0.0.0 --port ${PORT}"] 
