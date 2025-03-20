@@ -7,6 +7,7 @@ __pycache__
 *.pyd
 .Python
 env
+venv
 pip-log.txt
 pip-delete-this-directory.txt
 .tox
@@ -22,6 +23,6 @@ coverage.xml
 .venv
 .DS_Store
 frontend/
-backend/venv/
-backend/__pycache__/
-**/__pycache__/ 
+**/__pycache__/
+Dockerfile
+.dockerignore 
