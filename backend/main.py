@@ -7,10 +7,10 @@ app = FastAPI(
     version="1.0.0"
 )
 
-# Configure CORS
+# Add CORS middleware
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"],  # Frontend URL
+    allow_origins=["*"],  # In production, replace with your Vercel frontend URL
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -18,4 +18,8 @@ app.add_middleware(
 
 @app.get("/")
 async def root():
-    return {"message": "Welcome to Sabeel-e-Rahat API"} 
+    return {"message": "Welcome to Sabeel-e-Rahat API"}
+
+@app.get("/health")
+async def health_check():
+    return {"status": "healthy"} 
