@@ -187,17 +187,38 @@ export default function Home() {
               {domains.map((domain, index) => (
                 <div
                   key={index}
-                  className="bg-gradient-to-br from-[#ADD8E6]/10 to-[#C9C4B5]/5 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300"
+                  className="group relative bg-white rounded-xl overflow-hidden transition-all duration-300 hover:shadow-2xl transform hover:-translate-y-1"
                 >
-                  <div className="mb-4">
-                    {domain.icon}
+                  {/* Background Pattern */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-[#ADD8E6]/10 via-[#C9C4B5]/5 to-transparent opacity-50 group-hover:opacity-100 transition-opacity duration-300" />
+                  
+                  {/* Card Content */}
+                  <div className="relative p-6">
+                    {/* Icon Container */}
+                    <div className="mb-6 transform group-hover:scale-110 transition-transform duration-300">
+                      <div className="w-16 h-16 rounded-lg bg-gradient-to-br from-[#ADD8E6]/20 to-[#C9C4B5]/20 flex items-center justify-center shadow-lg">
+                        <div className="transform group-hover:rotate-12 transition-transform duration-300">
+                          {domain.icon}
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Title */}
+                    <h3 className="text-xl font-bold text-gray-800 mb-3 font-arial-black group-hover:text-[#ADD8E6] transition-colors duration-300">
+                      {domain.title}
+                    </h3>
+
+                    {/* Description */}
+                    <p className="text-gray-600 font-arial leading-relaxed">
+                      {domain.description}
+                    </p>
+
+                    {/* Hover Effect Line */}
+                    <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-[#ADD8E6] to-[#C9C4B5] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
                   </div>
-                  <h3 className="text-xl font-bold text-gray-800 mb-3 font-arial-black">
-                    {domain.title}
-                  </h3>
-                  <p className="text-gray-600 font-arial">
-                    {domain.description}
-                  </p>
+
+                  {/* Corner Accent */}
+                  <div className="absolute top-0 right-0 w-16 h-16 bg-gradient-to-bl from-[#ADD8E6]/10 to-transparent transform rotate-45 translate-x-8 -translate-y-8 group-hover:translate-x-6 group-hover:-translate-y-6 transition-transform duration-300" />
                 </div>
               ))}
             </div>
