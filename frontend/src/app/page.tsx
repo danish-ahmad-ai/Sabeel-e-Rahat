@@ -3,199 +3,204 @@ import Image from 'next/image';
 import Hero from '@/components/Hero';
 
 export default function Home() {
+  // Sample project data
+  const projects = [
+    {
+      id: 1,
+      title: "Winter Relief Campaign",
+      description: "Provided warm clothing and shelter to 500+ families",
+      image: "https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?auto=format&fit=crop&q=80",
+      category: "Emergency Relief"
+    },
+    {
+      id: 2,
+      title: "Education Support",
+      description: "Sponsored education for 200+ underprivileged students",
+      image: "https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&q=80",
+      category: "Education"
+    },
+    {
+      id: 3,
+      title: "Food Distribution",
+      description: "Monthly ration distribution to 1000+ families",
+      image: "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&q=80",
+      category: "Food Security"
+    },
+    {
+      id: 4,
+      title: "Medical Camp",
+      description: "Free medical checkups and medicines for 2000+ patients",
+      image: "https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&q=80",
+      category: "Healthcare"
+    }
+  ];
+
+  // Organization domains
+  const domains = [
+    {
+      title: "Food Security",
+      icon: (
+        <svg className="w-12 h-12 text-[#ADD8E6]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z" />
+        </svg>
+      ),
+      description: "Monthly ration distribution and food support programs for underprivileged families"
+    },
+    {
+      title: "Education",
+      icon: (
+        <svg className="w-12 h-12 text-[#ADD8E6]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l9-5-9-5-9 5 9 5z" />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l9-5-9-5-9 5 9 5z" />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l9-5-9-5-9 5 9 5z" />
+        </svg>
+      ),
+      description: "Supporting education through scholarships and school supplies"
+    },
+    {
+      title: "Healthcare",
+      icon: (
+        <svg className="w-12 h-12 text-[#ADD8E6]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+        </svg>
+      ),
+      description: "Medical camps and healthcare assistance for those in need"
+    },
+    {
+      title: "Employment",
+      icon: (
+        <svg className="w-12 h-12 text-[#ADD8E6]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+        </svg>
+      ),
+      description: "Job training and employment opportunities for sustainable growth"
+    }
+  ];
+
   return (
     <main>
       <Hero />
-      {/* Hero Section */}
-      <section className="relative h-[600px] flex items-center justify-center text-white">
-        <div className="absolute inset-0 bg-gradient-to-r from-[#ADD8E6]/90 to-[#D6E6E1]/90 z-10" />
-        <div className="absolute inset-0 bg-black/40" />
-        <div className="absolute inset-0">
-          <Image
-            src="/hero-image.jpg"
-            alt="Hero Image"
-            fill
-            className="object-cover"
-            priority
-          />
-        </div>
-        <div className="relative z-20 text-center max-w-4xl mx-auto px-4">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white drop-shadow-lg">
-            Making a Difference in Lives
-          </h1>
-          <p className="text-xl md:text-2xl mb-8 text-white drop-shadow-md">
-            Join us in our mission to create positive change through sustainable development and humanitarian aid.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Link
-              href="/donate"
-              className="bg-[#C9C4B5] hover:bg-white text-gray-800 px-8 py-3 rounded-md text-lg font-medium transition-colors shadow-lg hover:shadow-xl"
-            >
-              Donate Now
-            </Link>
-            <Link
-              href="/contact"
-              className="bg-white/10 backdrop-blur-sm hover:bg-white hover:text-gray-800 text-white border-2 border-white px-8 py-3 rounded-md text-lg font-medium transition-colors"
-            >
-              Get Involved
-            </Link>
-          </div>
-        </div>
-      </section>
 
-      {/* Mission & Vision Section */}
-      <section className="py-16 bg-gradient-to-b from-white to-[#ADD8E6]/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-800 mb-4">Our Mission & Vision</h2>
-            <div className="grid md:grid-cols-2 gap-8 mt-8">
-              <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-                <div className="text-[#C9C4B5] mb-4">
-                  <svg className="w-12 h-12 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-semibold mb-4 text-gray-800">Mission</h3>
-                <p className="text-gray-600">
-                  To empower communities through sustainable development initiatives and provide immediate relief to those in need.
-                </p>
+      {/* Founder's Message Section */}
+      <section className="py-16 sm:py-20 bg-gradient-to-br from-white to-[#ADD8E6]/5">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-8 md:gap-12">
+            <div className="w-full md:w-1/3">
+              <div className="relative w-full aspect-[3/4] rounded-lg overflow-hidden shadow-xl">
+                <Image
+                  src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80"
+                  alt="Founder"
+                  fill
+                  className="object-cover object-center"
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                />
               </div>
-              <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-                <div className="text-[#C9C4B5] mb-4">
-                  <svg className="w-12 h-12 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+            </div>
+            <div className="w-full md:w-2/3 space-y-6">
+              <h2 className="text-3xl sm:text-4xl font-bold text-gray-800 font-arial-black">
+                A Message from Our Founder
+              </h2>
+              <p className="text-gray-600 text-lg leading-relaxed font-arial">
+                "At Sabeel-e-Rahat, we believe in the power of community and compassion. Our journey began with a simple vision: to create lasting positive change in the lives of those who need it most. Through dedication and the support of countless individuals, we've been able to touch thousands of lives, but our work is far from over."
+              </p>
+              <div className="pt-4">
+                <Link
+                  href="/about"
+                  className="inline-flex items-center px-6 py-3 bg-[#C9C4B5] text-gray-800 rounded-md text-base font-semibold tracking-wide hover:bg-[#ADD8E6] transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5 font-arial"
+                >
+                  Learn Our Story
+                  <svg className="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                   </svg>
-                </div>
-                <h3 className="text-xl font-semibold mb-4 text-gray-800">Vision</h3>
-                <p className="text-gray-600">
-                  A world where every individual has access to basic necessities and opportunities for growth.
-                </p>
+                </Link>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Featured Projects Section */}
-      <section className="py-16 bg-[#ADD8E6]/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">Featured Projects</h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            {[1, 2, 3].map((project) => (
-              <div key={project} className="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-1 transition-all duration-300">
-                <div className="relative h-48">
-                  <Image
-                    src={`/project-${project}.jpg`}
-                    alt={`Project ${project}`}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold mb-2 text-gray-800">Project Title</h3>
-                  <p className="text-gray-600 mb-4">
-                    Brief description of the project and its impact on the community.
-                  </p>
-                  <Link
-                    href={`/projects/${project}`}
-                    className="text-[#ADD8E6] hover:text-[#C9C4B5] font-medium inline-flex items-center group"
+      {/* Projects Showcase Section */}
+      <section className="py-16 sm:py-20 bg-gradient-to-br from-[#ADD8E6]/20 to-[#C9C4B5]/10">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl sm:text-4xl font-bold text-gray-800 mb-4 font-arial-black">
+                Our Impact
+              </h2>
+              <p className="text-gray-600 text-lg font-arial">
+                Explore some of our recent projects and their impact on communities
+              </p>
+            </div>
+            <div className="relative">
+              <div className="flex overflow-x-auto gap-6 pb-8 snap-x snap-mandatory scrollbar-hide">
+                {projects.map((project) => (
+                  <div
+                    key={project.id}
+                    className="min-w-[300px] sm:min-w-[350px] snap-start bg-white rounded-xl shadow-lg overflow-hidden flex-shrink-0 transform hover:-translate-y-1 transition-all duration-300"
                   >
-                    Learn More
-                    <svg
-                      className="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                  </Link>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Upcoming Events Section */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">Upcoming Events</h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            {[1, 2].map((event) => (
-              <div key={event} className="bg-[#ADD8E6]/10 rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow">
-                <div className="flex items-start gap-4">
-                  <div className="bg-[#C9C4B5] text-gray-700 p-3 rounded-lg text-center min-w-[80px] shadow-md">
-                    <div className="text-2xl font-bold">15</div>
-                    <div className="text-sm">Mar</div>
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold mb-2 text-gray-800">Event Title</h3>
-                    <p className="text-gray-600 mb-4">
-                      Brief description of the event and its purpose.
-                    </p>
-                    <div className="flex items-center text-sm text-gray-600">
-                      <svg
-                        className="h-5 w-5 mr-2"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
+                    <div className="relative h-48">
+                      <Image
+                        src={project.image}
+                        alt={project.title}
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 768px) 300px, 350px"
+                      />
+                      <div className="absolute top-4 right-4 bg-[#C9C4B5] text-gray-800 px-3 py-1 rounded-full text-sm font-medium">
+                        {project.category}
+                      </div>
+                    </div>
+                    <div className="p-6">
+                      <h3 className="text-xl font-bold text-gray-800 mb-2 font-arial-black">{project.title}</h3>
+                      <p className="text-gray-600 mb-4 font-arial">{project.description}</p>
+                      <Link
+                        href={`/projects/${project.id}`}
+                        className="inline-flex items-center text-[#ADD8E6] hover:text-[#C9C4B5] font-medium transition-colors duration-300"
                       >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-                        />
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-                        />
-                      </svg>
-                      Location Name
+                        View Case Study
+                        <svg className="w-4 h-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </svg>
+                      </Link>
                     </div>
                   </div>
-                </div>
+                ))}
               </div>
-            ))}
-          </div>
-          <div className="text-center mt-8">
-            <Link
-              href="/events"
-              className="inline-block bg-[#ADD8E6] hover:bg-[#C9C4B5] text-gray-700 px-6 py-3 rounded-md text-lg font-medium transition-colors shadow-md hover:shadow-lg"
-            >
-              View All Events
-            </Link>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Call to Action Section */}
-      <section className="py-16 bg-gradient-to-r from-[#ADD8E6] to-[#D6E6E1] text-gray-700">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold mb-8">Join Us in Making a Difference</h2>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Link
-              href="/donate"
-              className="bg-[#C9C4B5] hover:bg-[#E6D5C9] text-gray-700 px-8 py-3 rounded-md text-lg font-medium transition-colors shadow-lg hover:shadow-xl"
-            >
-              Donate Now
-            </Link>
-            <Link
-              href="/volunteer"
-              className="bg-white/10 backdrop-blur-sm hover:bg-white/20 border-2 border-[#C9C4B5] px-8 py-3 rounded-md text-lg font-medium transition-colors"
-            >
-              Become a Volunteer
-            </Link>
-            <Link
-              href="/contact"
-              className="bg-white/10 backdrop-blur-sm hover:bg-white/20 border-2 border-[#C9C4B5] px-8 py-3 rounded-md text-lg font-medium transition-colors"
-            >
-              Contact Us
-            </Link>
+      {/* Organization Domains Section */}
+      <section className="py-16 sm:py-20 bg-gradient-to-br from-white to-[#ADD8E6]/10">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl sm:text-4xl font-bold text-gray-800 mb-4 font-arial-black">
+                Our Areas of Impact
+              </h2>
+              <p className="text-gray-600 text-lg font-arial">
+                We work across multiple domains to provide comprehensive support
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {domains.map((domain, index) => (
+                <div
+                  key={index}
+                  className="bg-gradient-to-br from-[#ADD8E6]/10 to-[#C9C4B5]/5 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300"
+                >
+                  <div className="mb-4">
+                    {domain.icon}
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-800 mb-3 font-arial-black">
+                    {domain.title}
+                  </h3>
+                  <p className="text-gray-600 font-arial">
+                    {domain.description}
+                  </p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
