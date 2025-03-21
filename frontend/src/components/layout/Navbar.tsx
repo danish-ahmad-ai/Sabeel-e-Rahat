@@ -30,8 +30,8 @@ const Navbar = () => {
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled 
-        ? 'bg-[#002f30]/80 backdrop-blur-md shadow-lg'
-        : 'bg-transparent'
+        ? 'bg-[#ADD8E6]/95 backdrop-blur-md shadow-lg'
+        : 'bg-black/20 backdrop-blur-sm'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-20">
@@ -56,17 +56,24 @@ const Navbar = () => {
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium tracking-wide transition-colors hover:bg-[#003f40] hover:shadow-inner"
+                className={`px-3 py-2 rounded-md text-sm font-medium tracking-wide transition-all duration-300 ${
+                  isScrolled
+                    ? 'text-gray-700 hover:text-gray-900 hover:bg-[#C9C4B5]/30'
+                    : 'text-white hover:text-white hover:bg-white/20'
+                }`}
               >
                 {item.label}
               </Link>
             ))}
             <Link
               href="/donate"
-              className="group relative inline-flex items-center px-6 py-2 bg-gradient-to-r from-[#b3873e] to-[#c99645] text-white rounded-md text-sm font-semibold tracking-wide transition-all duration-300 transform hover:-translate-y-0.5 hover:scale-105 shadow-lg hover:shadow-xl overflow-hidden"
+              className={`group relative inline-flex items-center px-6 py-2 rounded-md text-sm font-semibold tracking-wide transition-all duration-300 transform hover:-translate-y-0.5 hover:scale-105 shadow-lg hover:shadow-xl overflow-hidden ${
+                isScrolled
+                  ? 'bg-[#C9C4B5] text-gray-800 hover:bg-white'
+                  : 'bg-white text-gray-800 hover:bg-[#C9C4B5]'
+              }`}
             >
               <span className="relative z-10">Donate Now</span>
-              <div className="absolute inset-0 bg-gradient-to-r from-[#c99645] to-[#daa455] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
             </Link>
           </div>
 
@@ -74,7 +81,11 @@ const Navbar = () => {
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-300 hover:text-white hover:bg-[#003f40] focus:outline-none focus:ring-2 focus:ring-inset focus:ring-[#b3873e]"
+              className={`inline-flex items-center justify-center p-2 rounded-md transition-colors duration-300 ${
+                isScrolled
+                  ? 'text-gray-700 hover:text-gray-900 hover:bg-[#C9C4B5]/30'
+                  : 'text-white hover:text-white hover:bg-white/20'
+              }`}
             >
               <span className="sr-only">Open main menu</span>
               {!isMenuOpen ? (
@@ -93,13 +104,13 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="md:hidden bg-[#002526]/95 backdrop-blur-md">
+        <div className="md:hidden bg-[#ADD8E6]/95 backdrop-blur-md shadow-lg">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             {menuItems.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium tracking-wide hover:bg-[#003f40]"
+                className="text-gray-700 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium tracking-wide hover:bg-[#C9C4B5]/30"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {item.label}
@@ -107,7 +118,7 @@ const Navbar = () => {
             ))}
             <Link
               href="/donate"
-              className="bg-gradient-to-r from-[#b3873e] to-[#c99645] text-white block px-3 py-2 rounded-md text-base font-semibold tracking-wide hover:from-[#c99645] hover:to-[#daa455] mt-2"
+              className="bg-[#C9C4B5] text-gray-800 hover:bg-white block px-3 py-2 rounded-md text-base font-semibold tracking-wide mt-2"
               onClick={() => setIsMenuOpen(false)}
             >
               Donate Now
