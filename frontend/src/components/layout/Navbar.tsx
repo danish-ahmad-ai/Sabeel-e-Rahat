@@ -33,16 +33,16 @@ const Navbar = () => {
         ? 'bg-[#ADD8E6]/95 backdrop-blur-md shadow-lg'
         : 'bg-black/20 backdrop-blur-sm'
     }`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-20">
+      <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-8">
+        <div className="flex justify-between h-16 sm:h-20">
           <div className="flex items-center">
             <Link href="/" className="flex-shrink-0 flex items-center">
-              <div className="relative w-48 h-16">
+              <div className="relative w-36 sm:w-48 h-12 sm:h-16">
                 <Image
                   src="/images/White_logo.png"
                   alt="Sabeel-e-Rahat Logo"
                   fill
-                  sizes="(max-width: 768px) 100vw, 192px"
+                  sizes="(max-width: 640px) 144px, 192px"
                   className="object-contain"
                   priority
                 />
@@ -51,12 +51,12 @@ const Navbar = () => {
           </div>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex items-center space-x-4">
+          <div className="hidden md:flex items-center space-x-2 lg:space-x-4">
             {menuItems.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
-                className={`px-3 py-2 rounded-md text-sm font-medium tracking-wide transition-all duration-300 ${
+                className={`px-2 lg:px-3 py-2 rounded-md text-sm font-medium tracking-wide transition-all duration-300 ${
                   isScrolled
                     ? 'text-gray-700 hover:text-gray-900 hover:bg-[#C9C4B5]/30'
                     : 'text-white hover:text-white hover:bg-white/20'
@@ -67,7 +67,7 @@ const Navbar = () => {
             ))}
             <Link
               href="/donate"
-              className={`group relative inline-flex items-center px-6 py-2 rounded-md text-sm font-semibold tracking-wide transition-all duration-300 transform hover:-translate-y-0.5 hover:scale-105 shadow-lg hover:shadow-xl overflow-hidden ${
+              className={`group relative inline-flex items-center px-4 lg:px-6 py-2 rounded-md text-sm font-semibold tracking-wide transition-all duration-300 transform hover:-translate-y-0.5 hover:scale-105 shadow-lg hover:shadow-xl overflow-hidden ${
                 isScrolled
                   ? 'bg-[#C9C4B5] text-gray-800 hover:bg-white'
                   : 'bg-white text-gray-800 hover:bg-[#C9C4B5]'
@@ -86,6 +86,7 @@ const Navbar = () => {
                   ? 'text-gray-700 hover:text-gray-900 hover:bg-[#C9C4B5]/30'
                   : 'text-white hover:text-white hover:bg-white/20'
               }`}
+              aria-expanded={isMenuOpen}
             >
               <span className="sr-only">Open main menu</span>
               {!isMenuOpen ? (
@@ -105,12 +106,12 @@ const Navbar = () => {
       {/* Mobile Menu */}
       {isMenuOpen && (
         <div className="md:hidden bg-[#ADD8E6]/95 backdrop-blur-md shadow-lg">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+          <div className="px-3 pt-2 pb-4 space-y-2">
             {menuItems.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-gray-700 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium tracking-wide hover:bg-[#C9C4B5]/30"
+                className="text-gray-700 hover:text-gray-900 block px-3 py-2.5 rounded-md text-base font-medium tracking-wide hover:bg-[#C9C4B5]/30 active:bg-[#C9C4B5]/50 transition-all duration-300"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {item.label}
@@ -118,7 +119,7 @@ const Navbar = () => {
             ))}
             <Link
               href="/donate"
-              className="bg-[#C9C4B5] text-gray-800 hover:bg-white block px-3 py-2 rounded-md text-base font-semibold tracking-wide mt-2"
+              className="bg-[#C9C4B5] text-gray-800 hover:bg-white block px-3 py-2.5 rounded-md text-base font-semibold tracking-wide mt-3 transition-all duration-300 active:bg-gray-100"
               onClick={() => setIsMenuOpen(false)}
             >
               Donate Now

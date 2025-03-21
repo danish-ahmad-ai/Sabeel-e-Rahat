@@ -82,9 +82,9 @@ export default function Home() {
       <Hero />
 
       {/* Founder's Message Section */}
-      <section className="py-16 sm:py-20 bg-gradient-to-br from-white to-[#ADD8E6]/5">
+      <section className="py-12 sm:py-16 bg-gradient-to-br from-white to-[#ADD8E6]/5">
         <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-8 md:gap-12">
+          <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-6 md:gap-12">
             <div className="w-full md:w-1/3">
               <div className="relative w-full aspect-[3/4] rounded-lg overflow-hidden shadow-xl">
                 <Image
@@ -96,20 +96,20 @@ export default function Home() {
                 />
               </div>
             </div>
-            <div className="w-full md:w-2/3 space-y-6">
-              <h2 className="text-3xl sm:text-4xl font-bold text-gray-800 font-arial-black">
+            <div className="w-full md:w-2/3 space-y-4 sm:space-y-6">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 font-arial-black">
                 A Message from Our Founder
               </h2>
-              <p className="text-gray-600 text-lg leading-relaxed font-arial">
+              <p className="text-gray-600 text-base sm:text-lg leading-relaxed font-arial">
                 &ldquo;At Sabeel-e-Rahat, we believe in the power of community and compassion. Our journey began with a simple vision: to create lasting positive change in the lives of those who need it most. Through dedication and the support of countless individuals, we&apos;ve been able to touch thousands of lives, but our work is far from over.&rdquo;
               </p>
-              <div className="pt-4">
+              <div className="pt-2 sm:pt-4">
                 <Link
                   href="/about"
-                  className="inline-flex items-center px-6 py-3 bg-[#C9C4B5] text-gray-800 rounded-md text-base font-semibold tracking-wide hover:bg-[#ADD8E6] transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5 font-arial"
+                  className="inline-flex items-center px-4 sm:px-6 py-2.5 sm:py-3 bg-[#C9C4B5] text-gray-800 rounded-md text-sm sm:text-base font-semibold tracking-wide hover:bg-[#ADD8E6] transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5 font-arial w-full sm:w-auto justify-center sm:justify-start"
                 >
                   Learn Our Story
-                  <svg className="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg className="w-4 h-4 sm:w-5 sm:h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                   </svg>
                 </Link>
@@ -120,42 +120,42 @@ export default function Home() {
       </section>
 
       {/* Projects Showcase Section */}
-      <section className="py-16 sm:py-20 bg-gradient-to-br from-[#ADD8E6]/20 to-[#C9C4B5]/10">
+      <section className="py-12 sm:py-16 bg-gradient-to-br from-[#ADD8E6]/20 to-[#C9C4B5]/10">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl sm:text-4xl font-bold text-gray-800 mb-4 font-arial-black">
+            <div className="text-center mb-8 sm:mb-12">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 mb-3 sm:mb-4 font-arial-black">
                 Our Impact
               </h2>
-              <p className="text-gray-600 text-lg font-arial">
+              <p className="text-gray-600 text-base sm:text-lg font-arial">
                 Explore some of our recent projects and their impact on communities
               </p>
             </div>
             <div className="relative">
-              <div className="flex overflow-x-auto gap-6 pb-8 snap-x snap-mandatory scrollbar-hide">
+              <div className="flex overflow-x-auto gap-4 sm:gap-6 pb-6 sm:pb-8 snap-x snap-mandatory scrollbar-hide -mx-4 px-4">
                 {projects.map((project) => (
                   <div
                     key={project.id}
-                    className="min-w-[300px] sm:min-w-[350px] snap-start bg-white rounded-xl shadow-lg overflow-hidden flex-shrink-0 transform hover:-translate-y-1 transition-all duration-300"
+                    className="min-w-[280px] sm:min-w-[320px] snap-start bg-white rounded-xl shadow-lg overflow-hidden flex-shrink-0 transform hover:-translate-y-1 transition-all duration-300"
                   >
-                    <div className="relative h-48">
+                    <div className="relative h-40 sm:h-48">
                       <Image
                         src={project.image}
                         alt={project.title}
                         fill
                         className="object-cover"
-                        sizes="(max-width: 768px) 300px, 350px"
+                        sizes="(max-width: 640px) 280px, 320px"
                       />
-                      <div className="absolute top-4 right-4 bg-[#C9C4B5] text-gray-800 px-3 py-1 rounded-full text-sm font-medium">
+                      <div className="absolute top-3 right-3 bg-[#C9C4B5] text-gray-800 px-2.5 py-1 rounded-full text-xs sm:text-sm font-medium">
                         {project.category}
                       </div>
                     </div>
-                    <div className="p-6">
-                      <h3 className="text-xl font-bold text-gray-800 mb-2 font-arial-black">{project.title}</h3>
-                      <p className="text-gray-600 mb-4 font-arial">{project.description}</p>
+                    <div className="p-4 sm:p-6">
+                      <h3 className="text-lg sm:text-xl font-bold text-gray-800 mb-2 font-arial-black">{project.title}</h3>
+                      <p className="text-gray-600 text-sm sm:text-base mb-4 font-arial">{project.description}</p>
                       <Link
                         href={`/projects/${project.id}`}
-                        className="inline-flex items-center text-[#ADD8E6] hover:text-[#C9C4B5] font-medium transition-colors duration-300"
+                        className="inline-flex items-center text-[#ADD8E6] hover:text-[#C9C4B5] font-medium transition-colors duration-300 text-sm sm:text-base"
                       >
                         View Case Study
                         <svg className="w-4 h-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -172,18 +172,18 @@ export default function Home() {
       </section>
 
       {/* Organization Domains Section */}
-      <section className="py-16 sm:py-20 bg-gradient-to-br from-white to-[#ADD8E6]/10">
+      <section className="py-12 sm:py-16 bg-gradient-to-br from-white to-[#ADD8E6]/10">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl sm:text-4xl font-bold text-gray-800 mb-4 font-arial-black">
+            <div className="text-center mb-8 sm:mb-12">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 mb-3 sm:mb-4 font-arial-black">
                 Our Areas of Impact
               </h2>
-              <p className="text-gray-600 text-lg font-arial">
+              <p className="text-gray-600 text-base sm:text-lg font-arial">
                 We work across multiple domains to provide comprehensive support
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
               {domains.map((domain, index) => (
                 <div
                   key={index}
@@ -193,10 +193,10 @@ export default function Home() {
                   <div className="absolute inset-0 bg-gradient-to-br from-[#ADD8E6]/10 via-[#C9C4B5]/5 to-transparent opacity-50 group-hover:opacity-100 transition-opacity duration-300" />
                   
                   {/* Card Content */}
-                  <div className="relative p-6">
+                  <div className="relative p-4 sm:p-6">
                     {/* Icon Container */}
-                    <div className="mb-6 transform group-hover:scale-110 transition-transform duration-300">
-                      <div className="w-16 h-16 rounded-lg bg-gradient-to-br from-[#ADD8E6]/20 to-[#C9C4B5]/20 flex items-center justify-center shadow-lg">
+                    <div className="mb-4 sm:mb-6 transform group-hover:scale-110 transition-transform duration-300">
+                      <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-lg bg-gradient-to-br from-[#ADD8E6]/20 to-[#C9C4B5]/20 flex items-center justify-center shadow-lg">
                         <div className="transform group-hover:rotate-12 transition-transform duration-300">
                           {domain.icon}
                         </div>
@@ -204,12 +204,12 @@ export default function Home() {
                     </div>
 
                     {/* Title */}
-                    <h3 className="text-xl font-bold text-gray-800 mb-3 font-arial-black group-hover:text-[#ADD8E6] transition-colors duration-300">
+                    <h3 className="text-lg sm:text-xl font-bold text-gray-800 mb-2 sm:mb-3 font-arial-black group-hover:text-[#ADD8E6] transition-colors duration-300">
                       {domain.title}
                     </h3>
 
                     {/* Description */}
-                    <p className="text-gray-600 font-arial leading-relaxed">
+                    <p className="text-gray-600 font-arial leading-relaxed text-sm sm:text-base">
                       {domain.description}
                     </p>
 
@@ -218,7 +218,7 @@ export default function Home() {
                   </div>
 
                   {/* Corner Accent */}
-                  <div className="absolute top-0 right-0 w-16 h-16 bg-gradient-to-bl from-[#ADD8E6]/10 to-transparent transform rotate-45 translate-x-8 -translate-y-8 group-hover:translate-x-6 group-hover:-translate-y-6 transition-transform duration-300" />
+                  <div className="absolute top-0 right-0 w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-bl from-[#ADD8E6]/10 to-transparent transform rotate-45 translate-x-6 -translate-y-6 group-hover:translate-x-4 group-hover:-translate-y-4 transition-transform duration-300" />
                 </div>
               ))}
             </div>
