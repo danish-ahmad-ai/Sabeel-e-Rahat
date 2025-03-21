@@ -7,47 +7,47 @@ export default function Home() {
   const projects = [
     {
       id: 1,
-      title: "Winter Relief Campaign",
-      description: "Provided warm clothing and shelter to 500+ families",
-      image: "https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?auto=format&fit=crop&q=80",
-      category: "Emergency Relief"
+      title: `Winter Relief Campaign`,
+      description: `Provided warm clothing and shelter to 500+ families`,
+      image: `https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?auto=format&fit=crop&q=80`,
+      category: `Emergency Relief`
     },
     {
       id: 2,
-      title: "Education Support",
-      description: "Sponsored education for 200+ underprivileged students",
-      image: "https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&q=80",
-      category: "Education"
+      title: `Education Support`,
+      description: `Sponsored education for 200+ underprivileged students`,
+      image: `https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&q=80`,
+      category: `Education`
     },
     {
       id: 3,
-      title: "Food Distribution",
-      description: "Monthly ration distribution to 1000+ families",
-      image: "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&q=80",
-      category: "Food Security"
+      title: `Food Distribution`,
+      description: `Monthly ration distribution to 1000+ families`,
+      image: `https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&q=80`,
+      category: `Food Security`
     },
     {
       id: 4,
-      title: "Medical Camp",
-      description: "Free medical checkups and medicines for 2000+ patients",
-      image: "https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&q=80",
-      category: "Healthcare"
+      title: `Medical Camp`,
+      description: `Free medical checkups and medicines for 2000+ patients`,
+      image: `https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&q=80`,
+      category: `Healthcare`
     }
   ];
 
   // Organization domains
   const domains = [
     {
-      title: "Food Security",
+      title: `Food Security`,
       icon: (
         <svg className="w-12 h-12 text-[#ADD8E6]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z" />
         </svg>
       ),
-      description: "Monthly ration distribution and food support programs for underprivileged families"
+      description: `Monthly ration distribution and food support programs for underprivileged families`
     },
     {
-      title: "Education",
+      title: `Education`,
       icon: (
         <svg className="w-12 h-12 text-[#ADD8E6]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l9-5-9-5-9 5 9 5z" />
@@ -55,25 +55,25 @@ export default function Home() {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l9-5-9-5-9 5 9 5z" />
         </svg>
       ),
-      description: "Supporting education through scholarships and school supplies"
+      description: `Supporting education through scholarships and school supplies`
     },
     {
-      title: "Healthcare",
+      title: `Healthcare`,
       icon: (
         <svg className="w-12 h-12 text-[#ADD8E6]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
         </svg>
       ),
-      description: "Medical camps and healthcare assistance for those in need"
+      description: `Medical camps and healthcare assistance for those in need`
     },
     {
-      title: "Employment",
+      title: `Employment`,
       icon: (
         <svg className="w-12 h-12 text-[#ADD8E6]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
         </svg>
       ),
-      description: "Job training and employment opportunities for sustainable growth"
+      description: `Job training and employment opportunities for sustainable growth`
     }
   ];
 
