@@ -101,7 +101,7 @@ export default function Home() {
                 A Message from Our Founder
               </h2>
               <p className="text-gray-600 text-lg leading-relaxed font-arial">
-                "At Sabeel-e-Rahat, we believe in the power of community and compassion. Our journey began with a simple vision: to create lasting positive change in the lives of those who need it most. Through dedication and the support of countless individuals, we've been able to touch thousands of lives, but our work is far from over."
+                &ldquo;At Sabeel-e-Rahat, we believe in the power of community and compassion. Our journey began with a simple vision: to create lasting positive change in the lives of those who need it most. Through dedication and the support of countless individuals, we&apos;ve been able to touch thousands of lives, but our work is far from over.&rdquo;
               </p>
               <div className="pt-4">
                 <Link
