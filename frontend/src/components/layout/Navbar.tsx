@@ -38,14 +38,35 @@ const Navbar = () => {
           <div className="flex items-center">
             <Link href="/" className="flex-shrink-0 flex items-center">
               <div className="relative w-36 sm:w-48 h-12 sm:h-16">
-                <Image
-                  src="/images/White_logo.png"
-                  alt="Sabeel-e-Rahat Logo"
-                  fill
-                  sizes="(max-width: 640px) 144px, 192px"
-                  className="object-contain"
-                  priority
-                />
+                {/* White logo - visible when not scrolled */}
+                <div className="absolute inset-0 transition-opacity duration-300 flex items-center justify-center" 
+                     style={{ opacity: isScrolled ? 0 : 1 }}>
+                  <div className="w-32 sm:w-40 h-10 sm:h-12 relative">
+                    <Image
+                      src="/images/White_logo.png"
+                      alt="Sabeel-e-Rahat Logo"
+                      fill
+                      sizes="(max-width: 640px) 128px, 160px"
+                      className="object-contain object-center"
+                      priority
+                    />
+                  </div>
+                </div>
+                
+                {/* Black logo - visible when scrolled */}
+                <div className="absolute inset-0 transition-opacity duration-300 flex items-center justify-center" 
+                     style={{ opacity: isScrolled ? 1 : 0 }}>
+                  <div className="w-32 sm:w-40 h-10 sm:h-12 relative">
+                    <Image
+                      src="/images/black_logo.png"
+                      alt="Sabeel-e-Rahat Logo"
+                      fill
+                      sizes="(max-width: 640px) 128px, 160px"
+                      className="object-contain object-center"
+                      priority
+                    />
+                  </div>
+                </div>
               </div>
             </Link>
           </div>
