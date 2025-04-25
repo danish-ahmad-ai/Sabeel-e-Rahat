@@ -7,46 +7,46 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-gradient-to-b from-[#ADD8E6] to-[#D6E6E1] text-gray-700">
+    <footer className="bg-gradient-to-b from-[#E8F4F8] to-[#F5F7FA] text-[#2C5F7D]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {/* About Section */}
           <div className="col-span-2 md:col-span-1">
             <div className="relative w-36 sm:w-48 h-12 sm:h-16 mb-4">
               <Image
-                src="/images/White_logo.png"
+                src="/images/black_logo.png"
                 alt="Sabeel-e-Rahat Logo"
                 fill
                 sizes="(max-width: 640px) 144px, 192px"
                 className="object-contain"
               />
             </div>
-            <p className="text-gray-600 leading-relaxed text-sm sm:text-base font-light">
+            <p className="text-[#2C5F7D] leading-relaxed text-sm sm:text-base font-light">
               Empowering communities through sustainable development and humanitarian aid.
             </p>
           </div>
 
           {/* Quick Links */}
           <div className="col-span-1">
-            <h3 className="text-lg sm:text-xl font-bold mb-4 text-gray-800 tracking-wide">Quick Links</h3>
+            <h3 className="text-lg sm:text-xl font-bold mb-4 text-[#1A3F54] tracking-wide">Quick Links</h3>
             <ul className="space-y-2 sm:space-y-3">
               <li>
-                <Link href="/about" className="text-gray-600 hover:text-gray-900 transition-colors duration-200 font-medium tracking-wide text-sm sm:text-base">
+                <Link href="/about" className="text-[#2C5F7D] hover:text-[#1A3F54] transition-colors duration-200 font-medium tracking-wide text-sm sm:text-base">
                   About Us
                 </Link>
               </li>
               <li>
-                <Link href="/projects" className="text-gray-600 hover:text-gray-900 transition-colors duration-200 font-medium tracking-wide text-sm sm:text-base">
+                <Link href="/projects" className="text-[#2C5F7D] hover:text-[#1A3F54] transition-colors duration-200 font-medium tracking-wide text-sm sm:text-base">
                   Our Projects
                 </Link>
               </li>
               <li>
-                <Link href="/events" className="text-gray-600 hover:text-gray-900 transition-colors duration-200 font-medium tracking-wide text-sm sm:text-base">
+                <Link href="/events" className="text-[#2C5F7D] hover:text-[#1A3F54] transition-colors duration-200 font-medium tracking-wide text-sm sm:text-base">
                   Events
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="text-gray-600 hover:text-gray-900 transition-colors duration-200 font-medium tracking-wide text-sm sm:text-base">
+                <Link href="/contact" className="text-[#2C5F7D] hover:text-[#1A3F54] transition-colors duration-200 font-medium tracking-wide text-sm sm:text-base">
                   Contact Us
                 </Link>
               </li>
@@ -55,23 +55,23 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div className="col-span-1">
-            <h3 className="text-lg sm:text-xl font-bold mb-4 text-gray-800 tracking-wide">Contact Us</h3>
+            <h3 className="text-lg sm:text-xl font-bold mb-4 text-[#1A3F54] tracking-wide">Contact Us</h3>
             <ul className="space-y-2 sm:space-y-3">
-              <li className="flex items-center text-gray-600 hover:text-gray-900 font-medium text-sm sm:text-base">
-                <svg className="h-5 w-5 mr-3 text-[#C9C4B5]" fill="currentColor" viewBox="0 0 20 20">
+              <li className="flex items-center text-[#2C5F7D] hover:text-[#1A3F54] font-medium text-sm sm:text-base">
+                <svg className="h-5 w-5 mr-3 text-[#2C5F7D]" fill="currentColor" viewBox="0 0 20 20">
                   <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
                 </svg>
                 +92 XXX XXXXXXX
               </li>
-              <li className="flex items-center text-gray-600 hover:text-gray-900 font-medium text-sm sm:text-base">
-                <svg className="h-5 w-5 mr-3 text-[#C9C4B5]" fill="currentColor" viewBox="0 0 20 20">
+              <li className="flex items-center text-[#2C5F7D] hover:text-[#1A3F54] font-medium text-sm sm:text-base">
+                <svg className="h-5 w-5 mr-3 text-[#2C5F7D]" fill="currentColor" viewBox="0 0 20 20">
                   <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
                   <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
                 </svg>
                 info@sabeelerahat.org
               </li>
-              <li className="flex items-center text-gray-600 hover:text-gray-900 font-medium text-sm sm:text-base">
-                <svg className="h-5 w-5 mr-3 text-[#C9C4B5]" fill="currentColor" viewBox="0 0 20 20">
+              <li className="flex items-center text-[#2C5F7D] hover:text-[#1A3F54] font-medium text-sm sm:text-base">
+                <svg className="h-5 w-5 mr-3 text-[#2C5F7D]" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
                 </svg>
                 Your Address Here
@@ -81,11 +81,11 @@ const Footer = () => {
 
           {/* Social Links */}
           <div className="col-span-2 md:col-span-1">
-            <h3 className="text-lg sm:text-xl font-bold mb-4 text-gray-800 tracking-wide">Follow Us</h3>
+            <h3 className="text-lg sm:text-xl font-bold mb-4 text-[#1A3F54] tracking-wide">Follow Us</h3>
             <div className="flex space-x-5">
               <a
                 href="#"
-                className="text-gray-600 hover:text-gray-900 transition-colors duration-200"
+                className="text-[#2C5F7D] hover:text-[#1A3F54] transition-colors duration-200"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -100,7 +100,7 @@ const Footer = () => {
               </a>
               <a
                 href="#"
-                className="text-gray-600 hover:text-gray-900 transition-colors duration-200"
+                className="text-[#2C5F7D] hover:text-[#1A3F54] transition-colors duration-200"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -115,7 +115,7 @@ const Footer = () => {
               </a>
               <a
                 href="#"
-                className="text-gray-600 hover:text-gray-900 transition-colors duration-200"
+                className="text-[#2C5F7D] hover:text-[#1A3F54] transition-colors duration-200"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -129,8 +129,8 @@ const Footer = () => {
         </div>
 
         {/* Copyright */}
-        <div className="mt-8 border-t border-[#C9C4B5]/30 pt-6 sm:pt-8 text-center">
-          <p className="text-gray-600 text-xs sm:text-sm tracking-wide">
+        <div className="mt-8 border-t border-[#2C5F7D]/30 pt-6 sm:pt-8 text-center">
+          <p className="text-[#2C5F7D] text-xs sm:text-sm tracking-wide">
             © {currentYear} Sabeel-e-Rahat. All rights reserved.
           </p>
         </div>

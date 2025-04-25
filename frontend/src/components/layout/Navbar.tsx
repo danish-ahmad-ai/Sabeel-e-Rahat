@@ -30,7 +30,7 @@ const Navbar = () => {
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled 
-        ? 'bg-[#ADD8E6]/95 backdrop-blur-md shadow-lg'
+        ? 'bg-[#E8F4F8]/95 backdrop-blur-md shadow-lg'
         : 'bg-black/20 backdrop-blur-sm'
     }`}>
       <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-8">
@@ -58,7 +58,7 @@ const Navbar = () => {
                 href={item.href}
                 className={`px-2 lg:px-3 py-2 rounded-md text-sm font-medium tracking-wide transition-all duration-300 ${
                   isScrolled
-                    ? 'text-gray-700 hover:text-gray-900 hover:bg-[#C9C4B5]/30'
+                    ? 'text-[#2C5F7D] hover:text-[#1A3F54] hover:bg-[#E8F4F8]/30'
                     : 'text-white hover:text-white hover:bg-white/20'
                 }`}
               >
@@ -69,8 +69,8 @@ const Navbar = () => {
               href="/donate"
               className={`group relative inline-flex items-center px-4 lg:px-6 py-2 rounded-md text-sm font-semibold tracking-wide transition-all duration-300 transform hover:-translate-y-0.5 hover:scale-105 shadow-lg hover:shadow-xl overflow-hidden ${
                 isScrolled
-                  ? 'bg-[#C9C4B5] text-gray-800 hover:bg-white'
-                  : 'bg-white text-gray-800 hover:bg-[#C9C4B5]'
+                  ? 'bg-[#2C5F7D] text-white hover:bg-[#1A3F54]'
+                  : 'bg-white text-[#2C5F7D] hover:bg-[#E8F4F8]'
               }`}
             >
               <span className="relative z-10">Donate Now</span>
@@ -83,7 +83,7 @@ const Navbar = () => {
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className={`inline-flex items-center justify-center p-2 rounded-md transition-colors duration-300 ${
                 isScrolled
-                  ? 'text-gray-700 hover:text-gray-900 hover:bg-[#C9C4B5]/30'
+                  ? 'text-[#2C5F7D] hover:text-[#1A3F54] hover:bg-[#E8F4F8]/30'
                   : 'text-white hover:text-white hover:bg-white/20'
               }`}
               aria-expanded={isMenuOpen}
@@ -105,13 +105,13 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="md:hidden bg-[#ADD8E6]/95 backdrop-blur-md shadow-lg">
+        <div className="md:hidden bg-[#E8F4F8]/95 backdrop-blur-md shadow-lg">
           <div className="px-3 pt-2 pb-4 space-y-2">
             {menuItems.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-gray-700 hover:text-gray-900 block px-3 py-2.5 rounded-md text-base font-medium tracking-wide hover:bg-[#C9C4B5]/30 active:bg-[#C9C4B5]/50 transition-all duration-300"
+                className="text-[#2C5F7D] hover:text-[#1A3F54] block px-3 py-2.5 rounded-md text-base font-medium tracking-wide hover:bg-[#E8F4F8]/30 active:bg-[#E8F4F8]/50 transition-all duration-300"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {item.label}
@@ -119,7 +119,7 @@ const Navbar = () => {
             ))}
             <Link
               href="/donate"
-              className="bg-[#C9C4B5] text-gray-800 hover:bg-white block px-3 py-2.5 rounded-md text-base font-semibold tracking-wide mt-3 transition-all duration-300 active:bg-gray-100"
+              className="bg-[#2C5F7D] text-white hover:bg-[#1A3F54] block px-3 py-2.5 rounded-md text-base font-semibold tracking-wide mt-3 transition-all duration-300 active:bg-[#1A3F54]"
               onClick={() => setIsMenuOpen(false)}
             >
               Donate Now
